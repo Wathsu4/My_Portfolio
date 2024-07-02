@@ -5,62 +5,304 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e1937bfe65.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <h1>My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav>
+      <p class="logo"><span class="logo w">W</span>athsu</p>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div id="header">
+      <div class="container">
+        <div class="header-text">
+          <p>Undergraduate|Frontend Developer</p>
+          <p></p>
+          <h1>
+            Hi, I'm <span>Wathsala</span> Rathnayake<br />
+            From Sri Lanka
+          </h1>
+        </div>
+      </div>
 
-    <section id="about">
-      <h2>About Me</h2>
+      <!--About me part-->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="./images/My_img.jpg" />
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About Me</h1>
+              <p class="about-paragraph">
+                I am D.G. Wathsala Rathnayake, currently a 3rd-year student at
+                Sabaragamuwa University of Sri Lanka, Faculty of Computing,
+                specializing in Software Engineering. Throughout my academic
+                journey, I have gained substantial knowledge and hands-on
+                experience in web development technologies, including HTML, CSS,
+                React, JavaScript, and Tailwind CSS, as well as programming in C
+                and Java.<br /><br />
 
-      <img src="My_img.jpg" alt="My Profile" width="100" height="100" />
-      <p>
-        D.G. Wathsala Thathsarani Rathnayake <br />Undergraduate, Department of
-        Software Engineering, Faculty of Computing<br />
-        Sabaragamuwa University of Sri Lanka<br />
-        Hometown: Polonnaruwa <br /><br />I am currently pursuing my
-        undergraduate studies in Software Engineering at Sabaragamuwa University
-        of Sri Lanka, within the Faculty of Computing. My primary area of
-        interest lies in frontend development, and I am passionate about
-        learning and mastering various programming languages and technical
-        skills. My ultimate goal is to become a proficient and accomplished
-        software engineer.
-      </p>
-    </section>
-    <section id="Projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>SoulCare+</h3>
+                My passion lies in front-end development, where I enjoy crafting
+                intuitive and visually appealing user interfaces. I am committed
+                to continuously enhancing my skills and staying updated with the
+                latest industry trends to create impactful and user-centric web
+                applications.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('experience')">
+                  Experirnce
+                </p>
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Front-End Development</span><br />Proficient in
+                    creating responsive and visually appealing web interfaces
+                    using HTML, CSS, JavaScript, and frameworks like React and
+                    Tailwind CSS.
+                  </li>
+                  <li>
+                    <span>Web Design</span><br />Skilled in designing
+                    user-centric web layouts and ensuring an optimal user
+                    experience through intuitive design principles and modern
+                    UI/UX trends.
+                  </li>
+                  <li>
+                    <span>Programming</span><br />Experienced in writing clean
+                    and efficient code in multiple languages, including C, with
+                    a focus on problem-solving and developing functional
+                    software
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li>
+                    <span>Mental Health Support System</span><br />Developed a
+                    comprehensive mental health support system website. Focused
+                    on the front-end development using React and Tailwind CSS to
+                    create a responsive and user-friendly interface.
+                    Collaborated with the team to integrate front-end components
+                    with back-end services, ensuring a seamless user experience.
+                  </li>
+                  <li>
+                    <span>Personal Portfolio Website</span><br />Designed and
+                    developed a personal portfolio website to showcase projects
+                    and skills. Employed HTML, CSS, and JavaScript to create an
+                    engaging and visually appealing online presence,
+                    demonstrating proficiency in web development and design.
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>2007-2020</span><br />PL/ Aththanakadawala Nationala
+                    Collage.
+                  </li>
+                  <li>
+                    <span>2020 - Present</span><br />Sabaragamuwa University of
+                    Sri Lanka
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ---------About me div closed------------------- -->
+      <!-- ---------Services------------------- -->
+      <div id="services">
+        <div class="container">
+          <h1 class="sub-title service-name">My Services</h1>
+          <div class="services-list">
+            <div class="service-col1">
+              <h2>Front-End Development</h2>
+              <p class="services-text">
+                Crafting visually appealing and responsive user interfaces using
+                modern technologies such as HTML, CSS, JavaScript, React, and
+                Tailwind CSS. Ensuring optimal user experience and performance
+                across various devices and browsers.
+              </p>
+              <!--<a href="#">Learn more</a>-->
+            </div>
+            <div class="service-col2">
+              <h2>Web Design</h2>
+              <p class="services-text">
+                Designing intuitive and user-friendly web layouts that focus on
+                user experience (UX) and user interface (UI) principles.
+                Creating aesthetically pleasing designs that effectively
+                communicate brand identity and engage users.
+              </p>
+              <!--<a href="#">Learn more</a>-->
+            </div>
+            <div class="service-col3">
+              <h2>Portfolio Development</h2>
+              <p class="services-text">
+                Developing personalized portfolio websites to showcase skills,
+                projects, and achievements. Utilizing HTML, CSS, and JavaScript
+                to build dynamic and interactive web pages that highlight
+                individual talents and professional experiences.
+              </p>
+              <!--<a href="#">Learn more</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---SErvice part closed-->
+      <!-- Start Porfolio-->
+      <div id="portfolio">
+        <div class="container">
+          <h1 class="sub-title service-name">My Work</h1>
+          <div class="work-list">
+            <div class="work work-col1">
+              <img src="./images/work1.png" />
+              <div class="layer">
+                <h3>"Soulcare+" Mental Health support system:- Home Page</h3>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+            <div class="work work-col2">
+              <img src="./images/work2.png" />
+              <div class="layer">
+                <h3>
+                  "Soulcare+" Mental Health support system:- Mental Health
+                  Assessment page
+                </h3>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+            <div class="work work-col3">
+              <img src="./images/work2_1.png" />
+              <div class="layer">
+                <h3>
+                  "Soulcare+" Mental Health support system:- Mental Health
+                  assessment Quizes
+                </h3>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--<a href="#" class="btn">See more</a>-->
+        </div>
+      </div>
+      <!-- Portfolio part closed-->
+      <!-- Contact Part start-->
+      <div id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">Contact Me</h1>
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+                wathsalathathsarani15@gmail.com
+              </p>
+              <p><i class="fa-solid fa-phone"></i> 0771711383</p>
+              <div class="social-icons">
+                <a href="http://linkedin.com/in/wathsala-rathnayake-897451294"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://web.facebook.com/profile.php?id=100092657073466&mibextid=ZbWKwL"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </div>
+              <!--<a href=" " download class="btn btn2">Download Cv</a>-->
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  require
+                />
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                ></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+              </form>
+              <span id="msg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
         <p>
-          Website for Mental Care Support<br /><br />
-
-          Description:<br />
-          This project is a comprehensive website designed to provide mental
-          care support, developed using the MERN stack (MongoDB, Express.js,
-          React.js, and Node.js). This initiative significantly contributed to
-          the enhancement of my frontend development skills and fostered a
-          passion for creating user-friendly interfaces. The project was a
-          collaborative effort, highlighting the importance of teamwork and
-          communication. Its primary aim is to assist individuals dealing with
-          mental health challenges by offering accessible resources and support.
+          Copyright © Wathsu.<i class="fa-solid fa-heart"></i> Made with by
+          WathsuTR
         </p>
       </div>
-    </section>
+    </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: wathsalathathsarani@15gmail.com</p>
-    </section>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-links");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        /*---to active color show--*/
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycby67udvDzDHojRPb-zaje3t1Ya1GDmAavxum3u4jwiEMuFbOVAG2fInXwTY_7syVce5/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-    <script src="script.js"></script>
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent Successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
